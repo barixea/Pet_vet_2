@@ -1,0 +1,1407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1005</width>
+    <height>821</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Vet &amp; Pet: Animal Rescue Tracker</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #f8f9fa;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="sidebarWidget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>240</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>240</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QWidget {
+    background-color: #2b3544;
+}
+QPushButton {
+    text-align: left;
+    padding: 15px 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e2e8f0;
+}
+QPushButton:hover {
+    background-color: #3b4859;
+}
+       </string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>20</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="Navigation_Label">
+         <property name="styleSheet">
+          <string notr="true">font-weight: bold; color: #64748b; padding-left: 20px; padding-bottom: 10px; font-size: 18px; text-transform: uppercase;</string>
+         </property>
+         <property name="text">
+          <string>NAVIGATION</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="navigation_animal_button">
+         <property name="text">
+          <string> Animal </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="navigation_adopter_button">
+         <property name="text">
+          <string> Adopter Management</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="navigation_records_button">
+         <property name="text">
+          <string> Adoption Records</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="navigation_health_button">
+         <property name="text">
+          <string> Health Record</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Logout_button">
+         <property name="styleSheet">
+          <string notr="true">
+QPushButton {
+    background-color: #4d5e77;
+    color: white;
+}
+QPushButton:hover {
+    background-color: #dc2626;
+}
+          </string>
+         </property>
+         <property name="text">
+          <string>Logout</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="mainContentWidget" native="true">
+      <property name="styleSheet">
+       <string notr="true">background-color: white;</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_main">
+       <property name="leftMargin">
+        <number>30</number>
+       </property>
+       <property name="topMargin">
+        <number>20</number>
+       </property>
+       <property name="rightMargin">
+        <number>30</number>
+       </property>
+       <property name="bottomMargin">
+        <number>30</number>
+       </property>
+       <item>
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>3</number>
+         </property>
+         <widget class="QWidget" name="page_animals">
+          <layout class="QVBoxLayout" name="verticalLayout_page1">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="header1">
+             <property name="styleSheet">
+              <string notr="true">font-size: 22px; color: #1e293b; font-weight: 500;</string>
+             </property>
+             <property name="text">
+              <string>Animal Intake Management</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_1">
+             <property name="styleSheet">
+              <string notr="true">color: #e2e8f0;</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_page1" stretch="0,1">
+             <property name="topMargin">
+              <number>10</number>
+             </property>
+             <item>
+              <widget class="QWidget" name="Form1" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QLabel { color: #334155; font-weight: bold; font-size: 13px; }
+QLineEdit, QComboBox { padding: 8px; border: 1px solid #cbd5e1; border-radius: 4px; background-color: white; color: #1e293b; font-size: 13px; }
+QLineEdit:focus, QComboBox:focus { border: 1px solid #10b981; }
+                </string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_form1">
+                <property name="spacing">
+                 <number>12</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>20</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="AnimalProfile">
+                  <property name="styleSheet">
+                   <string notr="true">color: #475569; font-size: 14px; text-transform: uppercase;</string>
+                  </property>
+                  <property name="text">
+                   <string>ANIMAL PROFILE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="Line" name="sep1">
+                  <property name="styleSheet">
+                   <string notr="true">color: #e2e8f0;</string>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="AnimalID_label">
+                  <property name="text">
+                   <string>Animal ID</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="AnimalID_ledit">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="placeholderText">
+                   <string>e.g. A-105</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="Name_label">
+                  <property name="text">
+                   <string>Name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="AnimalName_ledit">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="animal_age">
+                  <property name="text">
+                   <string>Animal Age</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="animal_age_ledit"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="Animal_Specie_label">
+                  <property name="text">
+                   <string>Species</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="AnimalSpecie">
+                  <item>
+                   <property name="text">
+                    <string>Dog</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Cat</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Rabbit</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Other</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="Animalbreed_label">
+                  <property name="text">
+                   <string>Breed</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="AnimalBreed_ledit">
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="animal_status_label">
+                  <property name="text">
+                   <string>Current Status</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="AnimalStatus">
+                  <item>
+                   <property name="text">
+                    <string>Available</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Adopted</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>In Foster</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Medical Care</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="hlayout_btn1">
+                  <property name="topMargin">
+                   <number>15</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="SaveButton">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>38</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+background-color: #10b981; color: white; font-weight: bold; border-radius: 4px; border: none; font-size: 13px;
+}
+QPushButton:hover{
+  background-color: #0a7854;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Add / Save</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="ClearButton">
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>38</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{background-color: #f1f5f9; color: #334155; font-weight: bold; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 13px;}
+QPushButton:hover{
+  background-color: #dc2626;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Clear</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <spacer name="spacer1">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="table_animals">
+               <property name="styleSheet">
+                <string notr="true">
+QTableWidget { background-color: white; color: #1e293b; border: 1px solid #e2e8f0; gridline-color: #e2e8f0; font-size: 13px; }
+QHeaderView::section { background-color: #f1f5f9; color: #334155; font-weight: bold; border: none; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 8px; }
+                </string>
+               </property>
+               <property name="alternatingRowColors">
+                <bool>true</bool>
+               </property>
+               <property name="selectionBehavior">
+                <enum>QAbstractItemView::SelectRows</enum>
+               </property>
+               <column>
+                <property name="text">
+                 <string>Animal ID</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Name</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Age</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Species</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Breed</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Status</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_adopters">
+          <layout class="QVBoxLayout" name="verticalLayout_page2">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="header_2">
+             <property name="styleSheet">
+              <string notr="true">font-size: 22px; color: #1e293b; font-weight: 500;</string>
+             </property>
+             <property name="text">
+              <string>Adopter Management</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_2">
+             <property name="styleSheet">
+              <string notr="true">color: #e2e8f0;</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_page2" stretch="0,1">
+             <property name="topMargin">
+              <number>10</number>
+             </property>
+             <item>
+              <widget class="QWidget" name="formContainer2" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QLabel { color: #334155; font-weight: bold; font-size: 13px; }
+QLineEdit, QComboBox { padding: 8px; border: 1px solid #cbd5e1; border-radius: 4px; background-color: white; color: #1e293b; font-size: 13px; }
+QLineEdit:focus, QComboBox:focus { border: 1px solid #10b981; }
+                </string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_form2">
+                <property name="spacing">
+                 <number>12</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>20</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="adopter_profile">
+                  <property name="styleSheet">
+                   <string notr="true">color: #475569; font-size: 14px; text-transform: uppercase;</string>
+                  </property>
+                  <property name="text">
+                   <string>ADOPTER PROFILE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="Line" name="sep2">
+                  <property name="styleSheet">
+                   <string notr="true">color: #e2e8f0;</string>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="adopterid_label">
+                  <property name="text">
+                   <string>Adopter ID</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="adopter_id_ledit">
+                  <property name="placeholderText">
+                   <string>e.g. AD-501</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="fname_label">
+                  <property name="text">
+                   <string>First Name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="adopter_firstname_ledit">
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lname_label">
+                  <property name="text">
+                   <string>Last Name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="adopter_lastname_leditt">
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="adopter_age_label">
+                  <property name="text">
+                   <string>Age</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="adopter_age_edit"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="phone_label">
+                  <property name="text">
+                   <string>Phone Number</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="adopter_phone_ledit">
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="adress_label2">
+                  <property name="text">
+                   <string>Home Address</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="adopter_address_ledit">
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="adopter_status_label">
+                  <property name="text">
+                   <string>Status</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="adopter_status">
+                  <item>
+                   <property name="text">
+                    <string>Had Adopted</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Yet to Adopt</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontallayoutbutton2">
+                  <property name="topMargin">
+                   <number>15</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="save2">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>38</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+background-color: #10b981; color: white; font-weight: bold; border-radius: 4px; border: none; font-size: 13px;
+}
+QPushButton:hover{
+  background-color: #0a7854;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Add / Save</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="clear2">
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>38</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{background-color: #f1f5f9; color: #334155; font-weight: bold; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 13px;}
+QPushButton:hover{
+  background-color: #dc2626;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Clear</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <spacer name="spacer2">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="table_adopters">
+               <property name="styleSheet">
+                <string notr="true">
+QTableWidget { background-color: white; color: #1e293b; border: 1px solid #e2e8f0; gridline-color: #e2e8f0; font-size: 13px; }
+QHeaderView::section { background-color: #f1f5f9; color: #334155; font-weight: bold; border: none; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 8px; }
+                </string>
+               </property>
+               <property name="alternatingRowColors">
+                <bool>true</bool>
+               </property>
+               <property name="selectionBehavior">
+                <enum>QAbstractItemView::SelectRows</enum>
+               </property>
+               <column>
+                <property name="text">
+                 <string>Adopter ID</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>First Name</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Last Name</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Age</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Phone</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Address</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Status</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_adoptions">
+          <layout class="QVBoxLayout" name="verticalLayout_page3">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="header_3">
+             <property name="styleSheet">
+              <string notr="true">font-size: 22px; color: #1e293b; font-weight: 500;</string>
+             </property>
+             <property name="text">
+              <string>Adoption Records</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_3">
+             <property name="styleSheet">
+              <string notr="true">color: #e2e8f0;</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_page3" stretch="0,1">
+             <property name="topMargin">
+              <number>10</number>
+             </property>
+             <item>
+              <widget class="QWidget" name="formContainer3" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QLabel { color: #334155; font-weight: bold; font-size: 13px; }
+QLineEdit, QComboBox { padding: 8px; border: 1px solid #cbd5e1; border-radius: 4px; background-color: white; color: #1e293b; font-size: 13px; }
+QLineEdit:focus, QComboBox:focus { border: 1px solid #10b981; }
+                </string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_form3">
+                <property name="spacing">
+                 <number>12</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>20</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="adoption_contract">
+                  <property name="styleSheet">
+                   <string notr="true">color: #475569; font-size: 14px; text-transform: uppercase;</string>
+                  </property>
+                  <property name="text">
+                   <string>NEW ADOPTION CONTRACT</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="Line" name="sep3">
+                  <property name="styleSheet">
+                   <string notr="true">color: #e2e8f0;</string>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lbl_rec_id">
+                  <property name="text">
+                   <string>Adoption ID</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="adopt_id_ledit">
+                  <property name="placeholderText">
+                   <string>e.g. REC-992</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="adoption_date">
+                  <property name="text">
+                   <string>Adoption Date</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDateEdit" name="Adoption_Date">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>500</width>
+                    <height>500</height>
+                   </size>
+                  </property>
+                  <property name="minimumDate">
+                   <date>
+                    <year>2000</year>
+                    <month>1</month>
+                    <day>1</day>
+                   </date>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="feepaid">
+                  <property name="text">
+                   <string>Fee Paid</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="adopt_fee_ledit">
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="animalID3">
+                  <property name="text">
+                   <string>Animal ID</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="animal_id_combox"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="adopter_id2">
+                  <property name="text">
+                   <string>Adopter ID</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="adopter_id_combox"/>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="hlayout_btn3">
+                  <property name="topMargin">
+                   <number>15</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="save3">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>38</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+background-color: #10b981; color: white; font-weight: bold; border-radius: 4px; border: none; font-size: 13px;
+}
+QPushButton:hover{
+  background-color: #0a7854;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Add / Save</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="clear3">
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>38</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{background-color: #f1f5f9; color: #334155; font-weight: bold; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 13px;}
+QPushButton:hover{
+  background-color: #dc2626;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Clear</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <spacer name="spacer3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="table_adoptions">
+               <property name="maximumSize">
+                <size>
+                 <width>602</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QTableWidget { background-color: white; color: #1e293b; border: 1px solid #e2e8f0; gridline-color: #e2e8f0; font-size: 13px; }
+QHeaderView::section { background-color: #f1f5f9; color: #334155; font-weight: bold; border: none; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 8px; }
+                </string>
+               </property>
+               <property name="alternatingRowColors">
+                <bool>true</bool>
+               </property>
+               <property name="selectionBehavior">
+                <enum>QAbstractItemView::SelectRows</enum>
+               </property>
+               <column>
+                <property name="text">
+                 <string>Adoption ID</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Date</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Fee Paid</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Animal ID</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Adopter ID</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_health">
+          <layout class="QVBoxLayout" name="verticalLayout_page4">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="header_4">
+             <property name="styleSheet">
+              <string notr="true">font-size: 22px; color: #1e293b; font-weight: 500;</string>
+             </property>
+             <property name="text">
+              <string>Health &amp; Medical Logs</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_4">
+             <property name="styleSheet">
+              <string notr="true">color: #e2e8f0;</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_page4" stretch="0,1">
+             <property name="topMargin">
+              <number>10</number>
+             </property>
+             <item>
+              <widget class="QWidget" name="formContainer4" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QLabel { color: #334155; font-weight: bold; font-size: 13px; }
+QLineEdit, QComboBox { padding: 8px; border: 1px solid #cbd5e1; border-radius: 4px; background-color: white; color: #1e293b; font-size: 13px; }
+QLineEdit:focus, QComboBox:focus { border: 1px solid #10b981; }
+                </string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_form4">
+                <property name="spacing">
+                 <number>12</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>20</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="health_record">
+                  <property name="styleSheet">
+                   <string notr="true">color: #475569; font-size: 14px; text-transform: uppercase;</string>
+                  </property>
+                  <property name="text">
+                   <string>MEDICAL LOG</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="Line" name="sep4">
+                  <property name="styleSheet">
+                   <string notr="true">color: #e2e8f0;</string>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="animal_health_label">
+                  <property name="text">
+                   <string>Animal ID</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="Health_animalid_combox"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="health_date__label">
+                  <property name="text">
+                   <string>Date Administered</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDateEdit" name="Health_date_edit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="health_procedure_label">
+                  <property name="text">
+                   <string>Procedure Name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="health_procedure_ledit">
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="health_vet_label">
+                  <property name="text">
+                   <string>Veterinarian Name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="health_vet_ledit">
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="hlayout_btn4">
+                  <property name="topMargin">
+                   <number>15</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="btn_save_health">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>38</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+background-color: #10b981; color: white; font-weight: bold; border-radius: 4px; border: none; font-size: 13px;
+}
+QPushButton:hover{
+  background-color: #0a7854;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Add / Save</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="btn_clear_health">
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>38</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{background-color: #f1f5f9; color: #334155; font-weight: bold; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 13px;}
+QPushButton:hover{
+  background-color: #dc2626;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Clear</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <spacer name="spacer4">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="table_health">
+               <property name="maximumSize">
+                <size>
+                 <width>602</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QTableWidget { background-color: white; color: #1e293b; border: 1px solid #e2e8f0; gridline-color: #e2e8f0; font-size: 13px; }
+QHeaderView::section { background-color: #f1f5f9; color: #334155; font-weight: bold; border: none; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 8px; }
+                </string>
+               </property>
+               <property name="alternatingRowColors">
+                <bool>true</bool>
+               </property>
+               <property name="selectionBehavior">
+                <enum>QAbstractItemView::SelectRows</enum>
+               </property>
+               <column>
+                <property name="text">
+                 <string>Animal ID</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Date Administered</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Procedure</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Veterinarian</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_delete_btn">
+         <item>
+          <spacer name="horizontalSpacer_delete">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_delete_record">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Delete All Data</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #dc2626;
+    color: white;
+    border-radius: 8px;
+    font-size: 24px;
+}
+QPushButton:hover {
+    background-color: #b91c1c;
+}</string>
+           </property>
+           <property name="text">
+            <string>🗑</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginDialog</class>
+ <widget class="QDialog" name="LoginDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>420</width>
+    <height>657</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Vet &amp; Pet - Login</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QDialog {
+    background-color: white;
+}
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_main">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frame_content">
+     <property name="styleSheet">
+      <string notr="true">background-color: white;</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_content">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <property name="leftMargin">
+       <number>40</number>
+      </property>
+      <property name="topMargin">
+       <number>30</number>
+      </property>
+      <property name="rightMargin">
+       <number>40</number>
+      </property>
+      <property name="bottomMargin">
+       <number>30</number>
+      </property>
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QLabel" name="logo">
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; border-radius: 40px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>vet-pet-logo-512.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="welcome_title">
+        <property name="styleSheet">
+         <string notr="true">color: #1e293b; font-size: 24px; font-weight: 500;</string>
+        </property>
+        <property name="text">
+         <string>Welcome Back</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="subtitle_label">
+        <property name="styleSheet">
+         <string notr="true">color: #475569; font-size: 14px;</string>
+        </property>
+        <property name="text">
+         <string>Sign in to access the Animal Rescue System</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_1">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="username_label">
+        <property name="styleSheet">
+         <string notr="true">color: #334155; font-weight: bold; font-size: 13px;</string>
+        </property>
+        <property name="text">
+         <string>Username</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="input_username">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px; color: #1e293b;</string>
+        </property>
+        <property name="placeholderText">
+         <string>Enter your username</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="password_label">
+        <property name="styleSheet">
+         <string notr="true">color: #334155; font-weight: bold; font-size: 13px; margin-top: 5px;</string>
+        </property>
+        <property name="text">
+         <string>Password</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="input_password">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px; color: #1e293b;</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Enter your password</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="acc_error">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>42</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #fef2f2; color: #b91c1c; border: 1px solid #fca5a5; border-radius: 4px; padding: 10px; font-size: 13px;</string>
+        </property>
+        <property name="text">
+         <string>Invalid username or password</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="login_button">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton {
+    background-color: #10b981;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+}
+QPushButton:hover {
+    background-color: #059669;
+}
+         </string>
+        </property>
+        <property name="text">
+         <string>Sign In</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>15</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="Line" name="line_footer">
+        <property name="styleSheet">
+         <string notr="true">color: #e2e8f0;</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="footer">
+        <property name="styleSheet">
+         <string notr="true">color: #64748b; font-size: 12px; margin-top: 10px;</string>
+        </property>
+        <property name="text">
+         <string>Owner Access Only • Authorized Personnel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
